@@ -1,0 +1,98 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(130deg, navy, tomato) no-repeat;
+  position: relative;
+}
+.container{
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.container p{
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+ input{
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+  background: #afafaf65;
+  color: #333;
+  border: 0;
+  border-bottom: 1px solid #333;
+  border-radius: 10px;
+  outline: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.container input::placeholder{
+  color: #333;
+}
+.qr-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  margin: 10px auto;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 1s;
+}
+.active{
+  max-height: 150px;
+  opacity: 1;
+}
+.error{
+  border: 1px solid red;
+  background: #ed080869;
+  animation: shake .3s infinite;
+}
+@keyframes shake{
+  0%{
+    transform: translatex(-3px);
+  }
+  20%{
+    transform: translatex(0);
+  }
+  40%{
+    transform: translatex(3px);
+  }
+  60%{
+    transform: translatex(0);
+  }
+  80%{
+    transform: translatex(-3px);
+  }
+  100%{
+    transform: translatex(0);
+  }
+}
+button{
+  padding: 10px;
+  width: 100%;
+  border-radius: 20px;
+  background: linear-gradient(130deg, navy, tomato);
+  color: white;
+  border: none;
+  margin: 10px auto;
+  outline: 0;
+  box-shadow: -2px 2px 5px navy,   2px -2px 5px tomato
+  ;
+  transition: 1s;
+}
+button:hover{
+  background: linear-gradient(260deg, navy, tomato);
+  box-shadow: inset -2px 2px 5px #333,  inset 2px -2px 5px #fff
+  ;
+}
